@@ -1,0 +1,14 @@
+version: "3"
+services:
+  connector-MYCONNECTOR:
+    image: opencti/connector-MYCONNECTOR:rolling
+    environment:
+      - OPENCTI_URL=http://localhost
+      - OPENCTI_TOKEN=ChangeMe
+      - CONNECTOR_ID=ChangeMe
+      - CONNECTOR_TYPE=INTERNAL_ENRICHMENT
+      - CONNECTOR_NAME=MYCONNECTOR
+      - CONNECTOR_SCOPE='ipv4-addr'
+      - CONNECTOR_CONFIDENCE_LEVEL=3
+      - CONNECTOR_LOG_LEVEL=info
+    restart: always
